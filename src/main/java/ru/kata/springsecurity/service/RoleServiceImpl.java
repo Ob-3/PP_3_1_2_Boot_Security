@@ -1,5 +1,6 @@
 package ru.kata.springsecurity.service;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.kata.springsecurity.entity.Role;
@@ -33,11 +34,13 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
+    @Transactional
     public Role save(Role role) {
         return roleRepository.save(role);
     }
 
     @Override
+    @Transactional
     public void deleteById(Long id) {
         roleRepository.deleteById(id);
     }

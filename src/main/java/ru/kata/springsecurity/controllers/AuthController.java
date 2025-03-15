@@ -1,5 +1,6 @@
 package ru.kata.springsecurity.controllers;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import ru.kata.springsecurity.entity.Role;
 import ru.kata.springsecurity.entity.User;
 import ru.kata.springsecurity.repository.RoleRepository;
@@ -14,6 +15,7 @@ import java.util.Collections;
 import java.util.Optional;
 
 @Controller
+@RequestMapping("/")
 public class AuthController {
 
     private final UserService userService;
