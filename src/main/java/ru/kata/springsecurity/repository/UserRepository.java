@@ -7,7 +7,7 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    Optional<User> findByUsername(String username); // Для поиска пользователя по имени
+    Optional<User> findByUsername(String username); // Для поиска пользователя по имени, т.к. в в JpaRepository нет такого метода
 }
 
-// имплементировать данный интерфейс не нужно, т.к. Spring Data JPA сам создаст нужную реализацию!!!
+// импл-вать данный интерфейс в классе не нужно, т.к. Spring Data JPA сам создаст нужную реализацию!!!

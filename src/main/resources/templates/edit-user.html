@@ -13,10 +13,17 @@
     <br>
     <label for="password">Новый пароль:</label>
     <input type="password" id="password" name="password" />
-    <br><br>
+    <br>
+    <label>Роли:</label>
+    <div th:each="role : ${allRoles}">
+        <input type="checkbox" th:field="*{roles}" th:value="${role.id}">
+        <span th:text="${role.name}"></span>
+    </div>
+    <br>
     <button type="submit">Сохранить</button>
 </form>
 <br>
 <button type="button" onclick="window.location.href='/admin/users'">Отмена</button>
 </body>
 </html>
+
